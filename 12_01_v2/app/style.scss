@@ -1,19 +1,35 @@
 $color-primary: #ee4488;
 $color-primary-light: #ee7799;
+$color-text-main: #2d3436;
+$color-bg-page: #fdfdfd;
 
-html{
-  font-size: 10px;
+html {
+  font-size: 16px;
   margin: 0;
   padding: 0;
+
+  font-family: 'Inter', sans-serif;
 }
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+
+}
+
+// TWOJA PĘTLA - Zostaje bez zmian
 .category-list {
   list-style: none;
+  padding: 0;
 
   li {
-    padding: 1rem;
-    margin: 0.5rem;
-    border-radius: 6px;
+    padding: 1.5rem;
+    margin: 0.8rem 0;
+    border-radius: 8px;
     color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
   }
 
   @for $i from 1 through 4 {
@@ -22,68 +38,77 @@ html{
     }
   }
 }
-.container {
-  max-width: 800px;
-
-
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: $color-primary;
-  }
-}
-h1{   font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: $color-primary;
-}
-
-
 .post-card {
-  margin: 1.5rem;
   background: white;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
-  border-radius: 0.5rem;
-  border-left: 0.5rem solid $color-primary;
-}
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  border-left: 8px solid $color-primary;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+
   h3 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    color: #ee4488;
-    font-weight: bold;
-    font-size: 1.9rem;
+    margin: 0 0 1rem 0;
+    color: $color-primary;
+    font-size: 1.8rem;
+    font-weight: 800;
   }
 
   p {
+    color: $color-text-main;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+}
+h4 {
+  background: none;
+  color: $color-primary;
+  padding: 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.comments-post {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 0 0 20px 20px;
+  border: 1px dashed $color-primary-light;
+
+
+
+  p {
+    font-size: 0.9rem;
     color: #555;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    background: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin: 5px 0;
+    border-bottom: 1px solid #eee;
   }
+}
 
+// Menu
 .menu_main {
-  background: rgba(white, 0.3);
-display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 2rem;
-  a{
 
-    color: white;
-  }
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+  gap: 1rem;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+
 
 }
 a {
-  margin: 0rem 1rem;
-  padding: 0.5rem 1rem;
-  color: $color-primary;
   text-decoration: none;
-  font-weight: 600;
-  border-radius: 0.5rem;
-  transition: all 0.5s;
-  &:hover {
-    background-color: $color-primary-light;
-    color: white;
+  color: $color-primary;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
 
+  &:hover {
+    background: $color-primary;
+    color: white;
   }
 }

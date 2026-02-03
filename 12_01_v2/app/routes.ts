@@ -5,6 +5,7 @@ export default [
     layout("routes/MainLayout.tsx", [
     route("wpis", "routes/wpis.tsx"),
     route("kategorie", "routes/kategorie.tsx"),
+    route("wpis/:id", "routes/wpisDetails.tsx"),
         ])
 
 

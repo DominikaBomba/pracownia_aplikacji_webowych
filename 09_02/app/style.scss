@@ -1,0 +1,137 @@
+
+$color-primary: #ee4488;
+$color-primary-dark: #d6336c;
+$color-bg-page: #f8f9fa;
+$color-text-main: #2d3436;
+$color-text-muted: #636e72;
+$shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+body {
+  background-color:lighten($color-primary, 25%);
+  margin: 0;
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: $color-text-main;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+
+.post-card {
+  background: white;
+  border-radius: 16px;
+  margin: 2.5rem 0;
+  box-shadow: $shadow-soft;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.03);
+  transition: transform 0.2s ease;
+
+  & a{
+    display: block;
+    background-color: $color-primary;
+    color: $color-bg-page;
+    border-radius: 15px;
+    padding: 0.5rem 0.8rem;
+    margin-top:1rem;
+    width: 10rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    &:hover{
+      transform: translateY(4px);
+    }
+
+  }
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  .post-content {
+    padding: 2rem;
+
+    h3 {
+      margin: 0 0 1rem 0;
+      color: $color-text-main;
+      font-size: 1.75rem;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    p {
+      color: $color-text-muted;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+  }
+}
+
+.comments-section {
+  background-color: #fcfcfc;
+  border-top: 1px solid #eee;
+  padding: 1.5rem 2rem;
+
+  h4 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $color-primary;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #eee;
+      margin-left: 10px;
+    }
+  }
+}
+
+.comment-item {
+  background: white;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: $color-text-main;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  line-height: 1.5;
+
+  &:last-child { margin-bottom: 0; }
+
+
+  position: relative;
+  &:hover { border-color: $color-primary; }
+}
+
+.menu_main {
+  background: white;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  a {
+    text-decoration: none;
+    color: $color-text-muted;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: 0.2s;
+
+    &:hover, &.active {
+      color: $color-primary;
+      background: rgba($color-primary, 0.1);
+    }
+  }
+}
